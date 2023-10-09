@@ -7,7 +7,11 @@ require_once '../helper/connection.php';
 // $semester = $_POST['semester'];
 $nilai = $_POST['nilai'];
 
-$query = mysqli_query($connection, "insert into nilai (nilai1, nilai2, nilai3, nilai4, nilai5) value('$nilai1', '$nilai2', '$nilai3','$nilai4','$nilai5')");
+$query = "insert into matrix values";
+for ($i = 1; $i <= $rows; $i++) {
+        $nilai = $_POST['nilai_K' . $i];
+        $sql = $sql . " (NULL, $id, 'K" . $i . "', $nilai), ";
+    }
 
 if ($query) {
   $_SESSION['info'] = [

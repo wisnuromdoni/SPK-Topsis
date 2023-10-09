@@ -48,7 +48,7 @@ $result = mysqli_query($connection, "SELECT * FROM mahasiswa");
                                 $sql_t = "SELECT
                                             mahasiswa.nim, mahasiswa.nama";
 
-                                for ($i = 1; $i <= $_SESSION[['status'] == "Admin"]; $i++) {
+                                for ($i = 1; $i <= $_SESSION[['status'] == "admin"]; $i++) {
                                     $sql_t = $sql_t . ", SUM(CASE WHEN (matrix.id_kriteria='K" . $i . "') THEN matrix.nilai END) AS K" . $i . "";
                                 }
 
