@@ -7,13 +7,13 @@ require_once '../helper/connection.php';
 // $semester = $_POST['semester'];
 $nilai = $_POST['nilai'];
 
-$query = "insert into matrix values";
+$sqli = "INSERT INTO matrix VALUES";
 for ($i = 1; $i <= $rows; $i++) {
         $nilai = $_POST['nilai_K' . $i];
-        $sql = $sql . " (NULL, $id, 'K" . $i . "', $nilai), ";
+        $sqli = $sqli . " (NULL, $id, 'K" . $i . "', $nilai), ";
     }
 
-if ($query) {
+if ($sqli) {
   $_SESSION['info'] = [
     'status' => 'success',
     'message' => 'Berhasil menambah data'

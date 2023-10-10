@@ -3,7 +3,7 @@ require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 $result=[];
 // $result = mysqli_query($connection, "SELECT * FROM matrix");
-$result = mysqli_query($connection, "SELECT * FROM nilai, mahasiswa where mahasiswa.nim = mahasiswa.nim");
+$result = mysqli_query($connection, "SELECT * FROM matrix, mahasiswa where mahasiswa.nim = mahasiswa.nim");
 // $result = mysqli_query($connection, "SELECT * FROM mahasiswa");
 ?>
 
